@@ -15,27 +15,23 @@ void times_table(void)
 		{
 			int val = i * j;
 
-			if (val < 10)
+			if (j == 0)
 			{
 				_putchar(val + '0');
 			} else
 			{
-				int first_num = val / 10;
-				int last_num = val % 10;
-
-				_putchar(first_num + '0');
-				_putchar(last_num + '0');
-			}
-
-			if (j != 9)
-			{
 				_putchar(',');
 				_putchar(' ');
-			} else
-			{
-				_putchar(' ');
+				if (val < 10)
+				{
+					_putchar(' ');
+					_putchar(val + '0');
+				} else
+				{
+					_putchar((val / 10) + '0');
+					_putchar((val % 10) + '0');
+				}
 			}
-
 			j++;
 		}
 		_putchar('\n');
