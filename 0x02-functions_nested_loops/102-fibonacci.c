@@ -23,7 +23,7 @@ int main(void)
 		printf("%lu", sum);
 
 		if (n != 46)
-			printf(", ");
+			printf(", \n");
 		n++;
 	}
 	return (0);
