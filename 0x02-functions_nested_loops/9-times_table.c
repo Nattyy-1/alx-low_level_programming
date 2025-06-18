@@ -38,6 +38,7 @@ void times_table(void)
 
 			j++;
 		}
+		_putchar('\n');
 		i++;
 	}
 }
