@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	int num1 = 1;
-	long int num2 = 2;
-	long int sum = num1 + num2;
+	unsigned long int num1 = 1;
+	unsigned long int num2 = 2;
+	unsigned long int sum = num1 + num2;
 	int n = 0;
 
-	printf("%d, %lu, %lu, ", num1, num2, sum);
+	printf("%lu, %lu, %lu, ", num1, num2, sum);
 
-	while (n < 48)
+	while (n < 47)
 	{
-		int temp = sum;
+		unsigned long int temp = sum;
 
 		sum += num2;
 		num2 = temp;
 		printf("%lu", sum);
 
-		if (n != 47)
+		if (n != 46)
 			printf(", ");
 		n++;
 	}
