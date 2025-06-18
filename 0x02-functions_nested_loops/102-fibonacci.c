@@ -10,10 +10,9 @@ int main(void)
 	int num1 = 1;
 	long int num2 = 2;
 	long int sum = num1 + num2;
+	int n = 0;
 
 	printf("%d, %lu, %lu, ", num1, num2, sum);
-
-	int n = 0;
 
 	while (n < 48)
 	{
@@ -27,4 +26,5 @@ int main(void)
 			printf(", ");
 		n++;
 	}
+	return (0);
 }
