@@ -6,19 +6,16 @@
  */
 void print_triangle(int size)
 {
+	int i, j, k;
+
 	if (size <= 0)
 	{
 		_putchar('\n');
 		return;
 	}
 
-	int i;
-
 	for (i = 0; i < size; i++)
 	{
-		int j;
-		int k;
-
 		for (j = 0; j < size - i - 1; j++)
 		{
 			_putchar(' ');
