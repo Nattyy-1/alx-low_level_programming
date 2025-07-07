@@ -10,11 +10,10 @@
 char *_strcpy(char *dest, char *src)
 {
 	int len = 0;
+	int i;
 
 	while (src[len] != '\0')
 		len++;
-
-	int i;
 
 	for (i = 0; i <= len; i++)
 	{
