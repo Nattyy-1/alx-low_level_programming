@@ -2,9 +2,9 @@
 
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase
- * @s: the string that is converted to lowercase
+ * @s: the string that is converted to upppercase
  *
- * Return: lowercase version of the string s
+ * Return: uppercase version of the string s
  */
 char *string_toupper(char *s)
 {
@@ -15,7 +15,7 @@ char *string_toupper(char *s)
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			offset = 'a' - 97;
+			offset = s[i] - 'a';
 			s[i] = 'A' + offset;
 		}
 	}
