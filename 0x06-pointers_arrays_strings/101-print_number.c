@@ -6,16 +6,20 @@
  */
 void print_number(int n)
 {
-	int temp;
+	unsigned int num;
+	unsigned int temp;
 	int pow = 1;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
+	} else
+	{
+		num = n;
 	}
 
-	temp = n;
+	temp = num;
 
 	while (temp >= 10)
 	{
@@ -25,10 +29,10 @@ void print_number(int n)
 
 	while (pow > 1)
 	{
-		_putchar((n / pow) + '0');
-		n = n % pow;
+		_putchar((num / pow) + '0');
+		num = num % pow;
 		pow = pow / 10;
 	}
 
-	_putchar(n + '0');
+	_putchar(num + '0');
 }
