@@ -13,8 +13,8 @@ void print_diagsums(int *a, int size)
 	int right_diag_sum = 0;
 	int left_diag_sum = 0;
 
-	for (i = 0, j = 0; i < size; i++)
-		right_diag_sum += a[i * size + j];
+	for (i = 0; i < size; i++)
+		right_diag_sum += a[i * size + i];
 
 	for (i = 0, j = size - 1; i < size; i++, j--)
 		left_diag_sum += a[i * size + j];
