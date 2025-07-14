@@ -7,16 +7,5 @@
  */
 void set_string(char **s, char *to)
 {
-	int count = 0;
-	int i;
-
-	while (to[count] != '\0')
-		count++;
-
-	for (i = 0; i < count; i++)
-	{
-		(*s)[i] = to[i];
-	}
-
-	(*s)[i] = '\0';
+	*s = to;
 }
