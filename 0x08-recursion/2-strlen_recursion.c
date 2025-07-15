@@ -5,7 +5,7 @@
  * @s: the string that the length is being counted
  *
  * Return: length of the string
- */'
+ */
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
