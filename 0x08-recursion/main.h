@@ -9,5 +9,7 @@ int _pow_recursion(int x, int y);
 void _print_rev_recursion(char *s);
 int sqrt_helper(int num, int root);
 int _sqrt_recursion(int n);
+int _is_prime_helper(int n, int divisor);
+int is_prime(int n);
 
 #endif
