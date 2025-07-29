@@ -12,7 +12,7 @@
 char *_strdup(char *str)
 {
 	char *string;
-	int size = 1;
+	int size = 0;
 	int i;
 
 	if (str == NULL)
@@ -23,12 +23,12 @@ char *_strdup(char *str)
 		size++;
 	}
 
-	string = (char *)malloc(size * sizeof(char));
+	string = (char *)malloc((size + 1) * sizeof(char));
 
 	if (string == NULL)
 		return (NULL);
 
-	for (i = 0; i < size - 1; i++)
+	for (i = 0; i < size; i++)
 	{
 		string[i] = str[i];
 	}
