@@ -21,7 +21,7 @@ char **strtow(char *str)
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	word_count = _wordcount(str);
-	letter_count = calloc(word_count, sizeof(int));
+	letter_count = malloc(word_count * sizeof(int));
 	if (letter_count == NULL)
 		return (NULL);
 
