@@ -12,7 +12,7 @@ int _wordcount(char *str)
 	int i = 0;
 	int word_count = 1;
 
-	if (str == NULL || str == '\0' || str == " ")
+	if (str == NULL || str[0] == '\0')
 		return (0);
 
 	for (i = 0; str[i] != '\0'; i++)

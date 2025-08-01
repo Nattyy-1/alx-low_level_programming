@@ -15,11 +15,11 @@ char **strtow(char *str)
 	int *letter_count;
 	char **strings;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	word_count = _wordcount(str);
-	letter_count = calloc(word_count * sizeof(int));
+	letter_count = calloc(word_count, sizeof(int));
 	if (letter_count == NULL)
 		return (NULL);
 
@@ -37,9 +37,9 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-	strings[Word_count] = NULL;
+	strings[word_count] = NULL;
 	free(letter_count);
-	for (i = 0, j = 0, k = 0; i < str[i] != '\0'; k++, j++)
+	for (i = 0, j = 0, k = 0; str[k] != '\0'; k++, j++)
 	{
 		if (str[k] == " ")
 		{
