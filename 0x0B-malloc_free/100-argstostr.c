@@ -13,7 +13,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i = 0, j, k = 0;
-	int count;
+	int count = 0;
 	char *string;
 
 	if (ac == 0 || av == NULL)
@@ -23,10 +23,10 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 			count++;
-		count++;
+		count++; /* for new line character */
 	}
 
-	count++;
+	count++; /* For null terminator */
 	string = malloc(count * sizeof(char));
 
 	if (string == NULL)
