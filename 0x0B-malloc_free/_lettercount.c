@@ -11,9 +11,9 @@ int *_lettercount(int *letter_count, char *str)
 {
 	int i, j = 0;
 
-	for (i = 0; str[i] != '0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == " ")
+		if (str[i] == ' ')
 		{
 			j++;
 			continue;

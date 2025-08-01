@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include "main.h"
+#include "_wordcount.c"
+#include "_lettercount.c"
 
 /**
  * strtow - splits a string into words
@@ -24,12 +26,12 @@ char **strtow(char *str)
 		return (NULL);
 
 	letter_count = _lettercount(letter_count, str);
-	strings = malloc(word_count + 1 * sizeof(char *));
+	strings = malloc((word_count + 1) * sizeof(char *));
 	if (strings == NULL)
 		return (NULL);
 	for (i = 0; i < word_count; i++)
 	{
-		strings[i] = malloc(letter_count[i] + 1 * sizeof(char));
+		strings[i] = malloc((letter_count[i] + 1) * sizeof(char));
 		if (strings[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
