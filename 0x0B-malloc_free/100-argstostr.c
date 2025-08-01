@@ -39,6 +39,6 @@ char *argstostr(int ac, char **av)
 		string[k++] = '\n';
 	}
 
-	string[k] = '\0'
+	string[k] = '\0';
 	return (string);
 }
