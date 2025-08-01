@@ -11,5 +11,6 @@ char *argstostr(int ac, char **av);
 char **strtow(char *str);
 int _wordcount(char *str);
 int *_lettercount(int *letter_count, char *str);
+void init_array(int *arr, int size);
 
 #endif

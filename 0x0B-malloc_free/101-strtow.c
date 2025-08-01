@@ -3,6 +3,7 @@
 #include "main.h"
 #include "_wordcount.c"
 #include "_lettercount.c"
+#include "init_array.c"
 
 /**
  * strtow - splits a string into words
@@ -19,12 +20,12 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-
 	word_count = _wordcount(str);
 	letter_count = calloc(word_count, sizeof(int));
 	if (letter_count == NULL)
 		return (NULL);
 
+	init_array(letter_count, word_count);
 	letter_count = _lettercount(letter_count, str);
 	strings = malloc((word_count + 1) * sizeof(char *));
 	if (strings == NULL)
