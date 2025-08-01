@@ -24,7 +24,6 @@ char **strtow(char *str)
 	letter_count = malloc(word_count * sizeof(int));
 	if (letter_count == NULL)
 		return (NULL);
-
 	init_array(letter_count, word_count);
 	letter_count = _lettercount(letter_count, str);
 	strings = malloc((word_count + 1) * sizeof(char *));
@@ -42,16 +41,17 @@ char **strtow(char *str)
 	}
 	strings[word_count] = NULL;
 	free(letter_count);
-	for (i = 0, j = 0, k = 0; str[k] != '\0'; k++, j++)
+	for (i = 0, j = 0, k = 0; str[k] != '\0'; k++)
 	{
-		if (str[k] == ' ')
+		if (str[k] != ' ')
 		{
-			strings[i][j] = '\0';
-			i++;
-			j = 0;
-			continue;
+			strings[i][j++] = str[k];
+		} else if (j > 0)
+		{
+			strings[i++][j] = '\0', j = 0;
 		}
-		strings[i][j] = str[k];
 	}
+	if (j > 0)
+		strings[i][j] = '\0';
 	return (strings);
 }

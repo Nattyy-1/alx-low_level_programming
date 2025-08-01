@@ -10,16 +10,22 @@
 int _wordcount(char *str)
 {
 	int i = 0;
-	int word_count = 1;
+	int count = 0;
+	int in_word = 0;
 
 	if (str == NULL || str[0] == '\0')
 		return (0);
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i])
 	{
-		if (str[i] == ' ' && str[i + 1] != '\0')
-			word_count++;
+		if (str[i] != ' ' && in_word == 0)
+		{
+			in_word = 1;
+			count++;
+		} else if (str[i] == ' ')
+			in_word = 0;
+		i++;
 	}
 
-	return (word_count);
+	return (count);
 }
