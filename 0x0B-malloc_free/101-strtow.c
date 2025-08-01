@@ -41,7 +41,7 @@ char **strtow(char *str)
 	free(letter_count);
 	for (i = 0, j = 0, k = 0; str[k] != '\0'; k++, j++)
 	{
-		if (str[k] == " ")
+		if (str[k] == ' ')
 		{
 			strings[i][j] = '\0';
 			i++;
