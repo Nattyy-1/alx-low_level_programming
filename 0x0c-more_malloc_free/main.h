@@ -2,6 +2,6 @@
 #define MAIN_H
 
 void _putchar(char c);
-void *malloc(unsigned int b);
+void *malloc_checked(unsigned int b);
 
 #endif
