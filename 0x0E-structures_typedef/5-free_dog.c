@@ -1,7 +1,5 @@
 #include <stdlib.h>
 #include "dog.h"
-#include "dog.h"
-#include "dog.h"
 
 /**
  * free_dog - frees a dog variable
