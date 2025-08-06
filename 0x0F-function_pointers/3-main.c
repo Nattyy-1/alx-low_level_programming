@@ -21,9 +21,9 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(98);
 	}
-
-	if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
-	   && argv[2][0] != '/' && argv[2][0] != '%')
+	
+	calc.f = get_op_func(argv[2]);
+	if (!calc.f) 
 	{
 		printf("Error\n");
 		exit(99);
@@ -39,7 +39,6 @@ int main(int argc, char **argv)
 	}
 	
 	calc.op = argv[2];
-	calc.f = get_op_func(argv[2]);
 	result = calc.f(num1, num2);
 	printf("%d\n", result);
 
