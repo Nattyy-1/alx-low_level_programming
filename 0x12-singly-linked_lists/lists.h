@@ -20,5 +20,5 @@ typedef struct list_s
 } list_t;
 
 size_t print_list(const list_t *h);
-size_t print_list_helper(const list_t *h, size_t *node_count);
+
 #endif
