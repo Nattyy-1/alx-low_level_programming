@@ -22,5 +22,5 @@ size_t print_list_helper(const list_t *h, size_t *node_count)
 	{
 		printf("[%d] %s\n", h->len, h->str);
 	}
-	print_list_helper(h->next, node_count);
+	return (print_list_helper(h->next, node_count));
 }
