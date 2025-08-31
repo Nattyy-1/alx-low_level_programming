@@ -9,7 +9,7 @@
  */
 unsigned int _strlen(const char *str)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	if (str == NULL)
 		return (0);
